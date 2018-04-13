@@ -33,6 +33,10 @@ function extractRootDomain(url) {
             domain = splitArr[arrLen - 3] + '.' + domain;
         }
     }
+    if(domain.search("google.com")>-1)
+    {
+        domain=extractHostname(url);
+    }
     return domain;
 }
 
